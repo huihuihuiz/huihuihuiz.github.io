@@ -221,15 +221,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./nginx -s quit</span><br><span class="line">./nginx</span><br></pre></td></tr></table></figure>
 
 <p>2.重新加载配置文件：<br>当 ngin x的配置文件 nginx.conf 修改后，要想让配置生效需要重启 nginx，使用<code>-s reload</code>不用先停止 ngin x再启动 nginx 即可将配置信息在 nginx 中生效，如下：<br>./nginx -s reload</p>
-<p>启动成功后，在浏览器可以看到这样的页面：</p>
-<p><img src="/2021/11/07/centos7%E5%AE%89%E8%A3%85nginx/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211107132906327.png" alt="image-20211107132906327"></p>
 <h2 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h2><p>即在<code>rc.local</code>增加启动代码就可以了。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
 
 <p>增加一行 <code>/usr/local/nginx/sbin/nginx</code><br>设置执行权限：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 rc.local</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/11/07/centos7%E5%AE%89%E8%A3%85nginx/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211107133000811.png" alt="image-20211107133000811"></p>
 <p>​                                                                                                                  <strong>HKUN</strong></p>
 
       
